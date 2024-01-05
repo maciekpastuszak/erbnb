@@ -5,7 +5,11 @@ import { Tabs } from 'expo-router'
 const Layout = () => {
   return (
     <Tabs>
-
+      <Tabs.Screen 
+        name="index" 
+        options={{
+          tapBarLabel: 'Explore',
+      }} />
     </Tabs>
   )
 }
