@@ -6,6 +6,9 @@ const Layout = () => {
   return (
     <Tabs screenOptions={{
       tabBarActiveTintColor: Colors.primary,
+      tabBarLabelStyle: {
+        fontFamily: 'mon-sb',
+      }
     }}>
       <Tabs.Screen 
         name="index" 
