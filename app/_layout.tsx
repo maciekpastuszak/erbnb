@@ -67,7 +67,12 @@ function RootLayoutNav() {
         <Stack.Screen
         name="listing/[id]" options={{ headerTitle: ''}} />
         <Stack.Screen 
-        name="(modals)/booking" options={{ presentation: 'transparentModal' }} />
+        name="(modals)/booking" options={{ presentation: 'transparentModal',   
+        headerLeft: () => (
+          <TouchableOpacity onPress={() => router.back()}>
+            <Ionicons name="close-outline" />
+          </TouchableOpacity>
+        ) }} />
       </Stack>
   );
 }
