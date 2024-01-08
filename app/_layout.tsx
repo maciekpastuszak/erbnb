@@ -1,7 +1,9 @@
+import { Ionicons } from '@expo/vector-icons';
 import { useFonts } from 'expo-font';
 import { SplashScreen, Stack } from 'expo-router';
 import { useEffect } from 'react';
 import { useColorScheme } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -53,6 +55,11 @@ function RootLayoutNav() {
             fontFamily: 'mon-sb',
           },
           presentation: 'modal',
+          headerLeft: () => (
+            <TouchableOpacity>
+              <Ionicons name="close-outline" />
+            </TouchableOpacity>
+          )
         }}
         />
       </Stack>
