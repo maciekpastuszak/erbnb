@@ -1,5 +1,3 @@
-import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
 import { SplashScreen, Stack } from 'expo-router';
 import { useEffect } from 'react';
@@ -49,6 +47,14 @@ function RootLayoutNav() {
   return (
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="(modals)/login" options={{
+          title: "Log in or sign up",
+          headerTitleStyle: {
+            fontFamily: 'mon-sb',
+          },
+          presentation: 'modal',
+        }}
+        />
       </Stack>
   );
 }
