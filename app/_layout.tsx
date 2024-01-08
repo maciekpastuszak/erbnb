@@ -1,6 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import { useFonts } from 'expo-font';
-import { SplashScreen, Stack } from 'expo-router';
+import { SplashScreen, Stack, useRouter } from 'expo-router';
 import { useEffect } from 'react';
 import { useColorScheme } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
@@ -44,6 +44,7 @@ export default function RootLayout() {
 }
 
 function RootLayoutNav() {
+  const router = useRouter();
   const colorScheme = useColorScheme();
 
   return (
@@ -56,7 +57,7 @@ function RootLayoutNav() {
           },
           presentation: 'modal',
           headerLeft: () => (
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => router.back()}>
               <Ionicons name="close-outline" />
             </TouchableOpacity>
           )
